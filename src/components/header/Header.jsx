@@ -1,12 +1,8 @@
 import { addTask } from "../../redux/task/actions";
 import "./Header.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const Header = () => {
-  const { tasks } = useSelector((rootReducer) => rootReducer.taskReducer);
-
-  console.log({ tasks });
-
   const tasksList = [
     {
       id: 1,
