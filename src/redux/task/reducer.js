@@ -1,30 +1,16 @@
+import taskActionTypes from "./action-types";
+
 const initialValue = {
-  tasks: [
-    {
-      id: 1,
-      title: "Math test",
-      description: "Tomorrow I'm going to get a math test.",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      title: "Science test",
-      description: "Tomorrow I'm going to get a science test.",
-      isCompleted: false,
-    },
-  ],
+  tasks: [],
 };
 
 const taskReducer = (state = initialValue, action) => {
-  if (action.type === "user/addTask") {
-    return { ...state, tasks: action.payload };
+  switch (action.type) {
+    case taskActionTypes.ADD_TASK:
+      return { ...state, tasks: action.payload };
+    default:
+      return state;
   }
-
-  return state;
 };
 
 export default taskReducer;
-
-/* 
- 
-*/
