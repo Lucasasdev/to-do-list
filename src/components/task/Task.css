@@ -13,6 +13,11 @@
   color: #35383e;
   font-size: 20px;
   font-weight: bold;
+  overflow-wrap: break-word;
+}
+
+.description {
+  overflow-wrap: break-word;
 }
 
 .task-description {

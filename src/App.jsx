@@ -10,7 +10,7 @@ function App() {
     {
       id: 1,
       title: "Fist",
-      description: "First description",
+      description: "Firt description",
       isCompleted: false,
     },
     {
