@@ -5,3 +5,9 @@
   font-weight: 900;
   padding: 45px 0px;
 }
+
+@media (max-width: 650px) {
+  .header {
+    font-size: 30px;
+  }
+}

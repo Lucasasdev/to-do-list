@@ -1,0 +1,43 @@
+.input-container {
+  display: flex;
+  margin: 15px 0px;
+  width: 100%;
+}
+
+.input-title {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  transition: border-color 0.3s;
+  flex: 2;
+}
+
+.input-description {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  transition: border-color 0.3s;
+  flex: 2;
+}
+
+.add-task-button-container {
+  margin-left: 10px;
+  flex: 1;
+}
+
+@media (max-width: 650px) {
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-title {
+    width: 100%;
+  }
+
+  .input-description {
+    width: 100%;
+  }
+}

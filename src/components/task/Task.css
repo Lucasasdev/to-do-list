@@ -1,20 +1,21 @@
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f1f1f1;
+  border-radius: 22px;
+  margin-bottom: 10px;
+  padding: 21px 15px;
+  cursor: pointer;
+}
+
 .task {
   color: #35383e;
   font-size: 20px;
   font-weight: bold;
 }
 
-.task-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f1f1f1;
-  border-radius: 22px;
-  margin-bottom: 10px;
-  padding: 21px 15px;
-}
-
 .task-description {
-  font-size: 18px;
+  font-size: 16px;
   color: #35383e;
 }
