@@ -9,20 +9,20 @@ function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      title: "Fist",
-      description: "Firt description",
+      title: "Fist example",
+      description: "Firt description exemple",
       isCompleted: false,
     },
     {
       id: 2,
-      title: "Second",
-      description: "Second description",
+      title: "Second example",
+      description: "Second description example",
       isCompleted: false,
     },
     {
       id: 3,
-      title: "Third",
-      description: "Third description",
+      title: "Third example",
+      description: "Third description example",
       isCompleted: false,
     },
   ]);
