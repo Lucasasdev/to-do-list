@@ -1,20 +1,10 @@
-import { useSelector } from "react-redux";
-
 import "./Task.css";
 
-const Task = () => {
-  const { tasks } = useSelector((rootReducer) => rootReducer.taskReducer);
-
+const Task = ({ task }) => {
   return (
-    <>
-      {tasks.map((task) => (
-        <div className="task-container">
-          <h1 key={task.id} className="task">
-            {task.title}
-          </h1>
-        </div>
-      ))}
-    </>
+    <div className="task-container" key={task.id}>
+      <h1 className="task">{task.title}</h1>
+    </div>
   );
 };
 
