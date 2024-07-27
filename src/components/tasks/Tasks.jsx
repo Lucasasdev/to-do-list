@@ -1,9 +1,6 @@
-import { useSelector } from "react-redux";
 import Task from "../task/Task";
 
-const Tasks = () => {
-  const { tasks } = useSelector((rootReducer) => rootReducer.taskReducer);
-
+const Tasks = ({ tasks }) => {
   return (
     <>
       {tasks.map((task) => (
