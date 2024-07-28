@@ -19,3 +19,9 @@
   color: #00cd2d;
   transition: 0.3s ease-in-out;
 }
+
+@media (max-width: 650px) {
+  .add-button {
+    width: 60px;
+  }
+}
