@@ -27,6 +27,8 @@ function App() {
     },
   ]);
 
+  const [filter, setFilter] = useState("all");
+
   const handleTaskAddition = (inputTitle, inputDescription) => {
     if (!inputTitle) {
       alert("The title field is required.");
@@ -77,16 +79,54 @@ function App() {
     setTasks(newTasks);
   };
 
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter);
+  };
+
+  const getFilteredTasks = () => {
+    switch (filter) {
+      case "completed":
+        return tasks.filter((task) => task.isCompleted);
+      case "uncompleted":
+        return tasks.filter((task) => !task.isCompleted);
+      default:
+        return tasks;
+    }
+  };
+
   return (
     <>
       <div className="app-container">
         <Header />
         <InputTask handleTaskAddition={handleTaskAddition} />
-        <div className="all-filter-button-container ">
-          <button className="all-filter-button">Completed</button>
+
+        <div className="all-filter-button-container">
+          <button
+            className={`all-filter-button ${filter === "all" ? "active" : ""}`}
+            onClick={() => handleFilterChange("all")}
+          >
+            All
+          </button>
+          <button
+            className={`all-filter-button ${
+              filter === "completed" ? "active" : ""
+            }`}
+            onClick={() => handleFilterChange("completed")}
+          >
+            Completed
+          </button>
+          <button
+            className={`all-filter-button ${
+              filter === "uncompleted" ? "active" : ""
+            }`}
+            onClick={() => handleFilterChange("uncompleted")}
+          >
+            Uncompleted
+          </button>
         </div>
+
         <Tasks
-          tasks={tasks}
+          tasks={getFilteredTasks()}
           handleTaskClick={handleTaskClick}
           handleTaskDeletetion={handleTaskDeletetion}
           handleTaskEdition={handleTaskEdition}
