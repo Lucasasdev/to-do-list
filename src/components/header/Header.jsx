@@ -1,9 +1,9 @@
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ children }) => {
   return (
     <div>
-      <h1 className="header">To do Challenge</h1>
+      <h1 className="header">{children}</h1>
     </div>
   );
 };
