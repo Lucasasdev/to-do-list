@@ -1,6 +1,7 @@
 .task-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
   background-color: #f1f1f1;
   border-radius: 22px;
@@ -9,6 +10,13 @@
   cursor: pointer;
   color: #35383e;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  max-width: 620px;
 }
 
 .task {
@@ -27,4 +35,34 @@
 .task-description {
   font-size: 16px;
   color: #35383e;
+}
+
+.icon-container {
+  width: 30px;
+  height: 30px;
+}
+
+.remove-task-button {
+  background-color: rgba(53, 56, 62, 0.1);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  color: rgba(53, 56, 62, 25%);
+  font-weight: bold;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  flex: 1;
+}
+
+.remove-task-button:active {
+  background-color: rgba(255, 0, 0, 75%);
+  color: #f1f1f1;
+  transition: 0s ease-in-out;
+  border-color: rgba(255, 0, 0, 1);
+}
+
+.close-icon {
+  height: auto;
+  width: auto;
 }

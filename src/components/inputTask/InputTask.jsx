@@ -21,7 +21,7 @@ const InputTask = ({ handleTaskAddition }) => {
   };
 
   return (
-    <div>
+    <div className="container">
       <div className="input-container">
         <div>
           <input
@@ -42,7 +42,7 @@ const InputTask = ({ handleTaskAddition }) => {
           />
         </div>
         <div className="add-task-button-container">
-          <Button onClick={handleAddTaskClick}>Add</Button>
+          <Button onClick={handleAddTaskClick}>+</Button>
         </div>
       </div>
     </div>
