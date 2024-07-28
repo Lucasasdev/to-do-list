@@ -1,3 +1,5 @@
+import { AiFillEdit } from "react-icons/ai";
+import { CgClose } from "react-icons/cg";
 import "./Task.css";
 
 const Task = ({
@@ -28,7 +30,7 @@ const Task = ({
 
       <div className="edit-button-container">
         <button className="edit-task-button" onClick={handleEdit}>
-          E
+          <AiFillEdit />
         </button>
       </div>
       <div className="remove-task-container">
