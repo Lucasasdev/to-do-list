@@ -62,15 +62,34 @@ function App() {
     setTasks(newTasks);
   };
 
+  const handleTaskEdition = (taskId, newTitle, newDescription) => {
+    if (!newTitle) {
+      alert("The title is required!");
+      return;
+    }
+    const newTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        return { ...task, title: newTitle, description: newDescription };
+      }
+      return task;
+    });
+
+    setTasks(newTasks);
+  };
+
   return (
     <>
       <div className="app-container">
         <Header />
         <InputTask handleTaskAddition={handleTaskAddition} />
+        <div className="all-filter-button-container ">
+          <button className="all-filter-button">Completed</button>
+        </div>
         <Tasks
           tasks={tasks}
           handleTaskClick={handleTaskClick}
           handleTaskDeletetion={handleTaskDeletetion}
+          handleTaskEdition={handleTaskEdition}
         />
       </div>
     </>

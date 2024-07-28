@@ -1,6 +1,18 @@
 import "./Task.css";
 
-const Task = ({ task, handleTaskClick, handleTaskDeletetion }) => {
+const Task = ({
+  task,
+  handleTaskClick,
+  handleTaskDeletetion,
+  handleTaskEdition,
+}) => {
+  const handleEdit = () => {
+    const newTitle = prompt("Enter the new title:");
+    const newDescription = prompt("Enter the new description:");
+
+    handleTaskEdition(task.id, newTitle, newDescription);
+  };
+
   return (
     <div
       className="task-container"
@@ -14,7 +26,12 @@ const Task = ({ task, handleTaskClick, handleTaskDeletetion }) => {
         <p className="description">{task.description}</p>
       </div>
 
-      <div className="icon-container">
+      <div className="edit-button-container">
+        <button className="edit-task-button" onClick={handleEdit}>
+          E
+        </button>
+      </div>
+      <div className="remove-task-container">
         <button
           className="remove-task-button"
           onClick={() => handleTaskDeletetion(task.id)}

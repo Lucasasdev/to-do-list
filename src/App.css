@@ -8,6 +8,14 @@
   background-color: #ffffff;
 }
 
+/*All filter button*/
+.all-filter-button-container {
+  margin: 10px 10px 10px 0px;
+}
+
+.all-filter-button {
+}
+
 @media (max-width: 850px) {
   .app-container {
     max-width: 500;
