@@ -26,7 +26,7 @@ const InputTask = ({ handleTaskAddition }) => {
         <div>
           <input
             type="text"
-            placeholder="Add a title"
+            placeholder="Title"
             className="input-title"
             onChange={handleInputTitleChange}
             value={inputTitle}
@@ -35,7 +35,7 @@ const InputTask = ({ handleTaskAddition }) => {
         <div>
           <input
             type="text"
-            placeholder="Add a description (Optional)"
+            placeholder="Description (Optional)"
             className="input-description"
             onChange={handleInputDescChange}
             value={inputDescription}
