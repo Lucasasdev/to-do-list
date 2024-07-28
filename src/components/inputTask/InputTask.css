@@ -1,15 +1,27 @@
 .container {
-  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
 }
 
 .input-container {
   display: flex;
-  margin-bottom: 15px;
-  padding: 0px;
+  width: 100%;
+  gap: 10px;
+}
+
+.input-title-container {
+  width: 100%;
+}
+
+.input-description-container {
   width: 100%;
 }
 
 .input-title {
+  width: 100%;
   padding: 10px;
   margin-right: 10px;
   border: none;
@@ -20,7 +32,7 @@
   opacity: 50%;
   font-size: 16px;
   font-weight: 500;
-  flex: 2;
+  flex: 1;
 }
 
 .input-description {
@@ -29,11 +41,15 @@
   outline: none;
   border-bottom: 2px solid #ccc;
   transition: border-color 0.3s;
-  flex: 2;
   color: #35383e;
   opacity: 50%;
   font-size: 16px;
   font-weight: 500;
+  width: 100%;
+}
+
+.add-task-button-container {
+  height: 40px;
 }
 
 .input-title:focus {
@@ -53,7 +69,17 @@
   .input-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .add-task-button-container {
+    height: 40px;
   }
 
   .input-title {

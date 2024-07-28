@@ -23,7 +23,7 @@ const InputTask = ({ handleTaskAddition }) => {
   return (
     <div className="container">
       <div className="input-container">
-        <div>
+        <div className="input-title-container">
           <input
             type="text"
             placeholder="Title"
@@ -32,7 +32,7 @@ const InputTask = ({ handleTaskAddition }) => {
             value={inputTitle}
           />
         </div>
-        <div>
+        <div className="input-description-container">
           <input
             type="text"
             placeholder="Description (Optional)"
@@ -41,9 +41,9 @@ const InputTask = ({ handleTaskAddition }) => {
             value={inputDescription}
           />
         </div>
-        <div className="add-task-button-container">
-          <Button onClick={handleAddTaskClick}>+</Button>
-        </div>
+      </div>
+      <div className="add-task-button-container">
+        <Button onClick={handleAddTaskClick}>+</Button>
       </div>
     </div>
   );
