@@ -4,13 +4,13 @@
   background-color: #00cd2d;
   color: #ffffff;
   border: none;
-  border-radius: 22px;
+  border-radius: 15px;
   padding: 0px 20px;
   font-weight: bolder;
   font-size: 12px;
   opacity: 0.9;
   cursor: pointer;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 650px) {

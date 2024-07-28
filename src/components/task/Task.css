@@ -7,17 +7,21 @@
   margin-bottom: 10px;
   padding: 21px 15px;
   cursor: pointer;
+  color: #35383e;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .task {
-  color: #35383e;
   font-size: 20px;
   font-weight: bold;
   overflow-wrap: break-word;
+  padding-bottom: 5px;
 }
 
 .description {
   overflow-wrap: break-word;
+  color: #35383e;
+  font-weight: 500;
 }
 
 .task-description {
