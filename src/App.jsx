@@ -2,6 +2,7 @@ import Header from "./components/header/Header";
 import InputTask from "./components/inputTask/InputTask";
 import Tasks from "./components/tasks/Tasks";
 import { useState } from "react";
+import SubTitle from "./components/subTitle/SubTItle";
 import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
@@ -97,9 +98,10 @@ function App() {
   return (
     <>
       <div className="app-container">
-        <Header />
+        <Header>To do List</Header>
+        <SubTitle>Add task:</SubTitle>
         <InputTask handleTaskAddition={handleTaskAddition} />
-
+        <SubTitle>Filter Tasks:</SubTitle>
         <div className="all-filter-button-container">
           <button
             className={`all-filter-button ${filter === "all" ? "active" : ""}`}
@@ -124,7 +126,7 @@ function App() {
             Uncompleted
           </button>
         </div>
-
+        <SubTitle>Tasks:</SubTitle>
         <Tasks
           tasks={getFilteredTasks()}
           handleTaskClick={handleTaskClick}
