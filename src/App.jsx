@@ -7,26 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "First example",
-      description: "Fisrt description exemple",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      title: "Second example",
-      description: "Second description example",
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      title: "Third example",
-      description: "Third description example",
-      isCompleted: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const [filter, setFilter] = useState("all");
 
