@@ -32,6 +32,25 @@
   color: #f1f1f1;
 }
 
+.filter-input {
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #35383e;
+  opacity: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.filter-input:focus {
+  border-bottom: 2px solid #00cd2d;
+}
+
 @media (max-width: 850px) {
   .app-container {
     max-width: 500;

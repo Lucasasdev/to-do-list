@@ -10,8 +10,8 @@ function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      title: "Fist example",
-      description: "Firt description exemple",
+      title: "First example",
+      description: "Fisrt description exemple",
       isCompleted: false,
     },
     {
@@ -29,6 +29,8 @@ function App() {
   ]);
 
   const [filter, setFilter] = useState("all");
+
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleTaskAddition = (inputTitle, inputDescription) => {
     if (!inputTitle) {
@@ -84,15 +86,31 @@ function App() {
     setFilter(newFilter);
   };
 
+  const handleSearchTermChange = (newSearchTerm) => {
+    setSearchTerm(newSearchTerm);
+  };
+
   const getFilteredTasks = () => {
+    let filteredTasks = tasks;
+
     switch (filter) {
       case "completed":
-        return tasks.filter((task) => task.isCompleted);
+        filteredTasks = tasks.filter((task) => task.isCompleted);
+        break;
       case "uncompleted":
-        return tasks.filter((task) => !task.isCompleted);
+        filteredTasks = tasks.filter((task) => !task.isCompleted);
+        break;
       default:
-        return tasks;
+        break;
     }
+
+    if (searchTerm) {
+      filteredTasks = filteredTasks.filter((task) =>
+        task.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    return filteredTasks;
   };
 
   return (
@@ -125,6 +143,16 @@ function App() {
           >
             Uncompleted
           </button>
+        </div>
+
+        <div>
+          <input
+            className="filter-input"
+            type="text"
+            placeholder="Search by title"
+            value={searchTerm}
+            onChange={(e) => handleSearchTermChange(e.target.value)}
+          />
         </div>
         <SubTitle>Tasks:</SubTitle>
         <Tasks
