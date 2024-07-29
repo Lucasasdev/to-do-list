@@ -3,7 +3,7 @@
   min-height: 300px;
   margin: 30px auto;
   border-radius: 45px;
-  padding: 20px;
+  padding: 45px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
@@ -57,7 +57,7 @@
     min-height: 300px;
     margin: 30px 20px;
     border-radius: 45px;
-    padding: 20px;
+    padding: 45px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
   }
