@@ -1,5 +1,4 @@
 import { AiFillEdit } from "react-icons/ai";
-import { CgClose } from "react-icons/cg";
 import "./Task.css";
 
 const Task = ({

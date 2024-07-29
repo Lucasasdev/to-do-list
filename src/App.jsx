@@ -68,13 +68,13 @@ function App() {
   };
 
   const handleTaskEdition = (taskId, newTitle, newDescription) => {
-    if (!newTitle) {
-      alert("The title is required!");
-      return;
-    }
     const newTasks = tasks.map((task) => {
       if (task.id === taskId) {
-        return { ...task, title: newTitle, description: newDescription };
+        return {
+          ...task,
+          title: newTitle ? newTitle : task.title,
+          description: newDescription ? newDescription : task.description,
+        };
       }
       return task;
     });
