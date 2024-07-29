@@ -28,8 +28,8 @@
 }
 
 .all-filter-button.active {
-  background-color: rgba(53, 56, 62, 75%);
-  color: #f1f1f1;
+  color: rgba(53, 56, 62, 75%);
+  border: 1px solid rgba(53, 56, 62, 20%);
 }
 
 .filter-input {
