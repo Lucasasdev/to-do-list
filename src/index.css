@@ -1,3 +1,11 @@
+:root {
+  /* colors */
+  --primary-color: #35383e;
+  --background-color: #f1f1f1;
+  --gray-container-color: rgba(53, 56, 62, 5%);
+  --white: #ffffff;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -11,7 +19,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f1f1f1;
+  background-color: var(--background-color);
 }
 
 code {

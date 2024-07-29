@@ -17,12 +17,12 @@
 }
 
 .all-filter-button {
-  background-color: #f1f1f1;
+  background-color: var(--background-color);
   border: none;
   border-radius: 15px;
   color: rgba(53, 56, 62, 25%);
   font-weight: bold;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   padding: 10px;
 }
